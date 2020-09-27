@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Multiplicando</title>
+
+
+    <style>
+    
+        body{
+            
+             background-color: rgba(3, 3, 163, 0.5);
+
+        }
+
+        input{
+
+            font: normal 11pt Arial;
+            width: 100px;
+            background-color: white(70, 0, 128);
+        }
+
+#multi{
+
+    background-color: red;
+    width: 80px;
+    font: normal 11,5pt Arial;
+    color:yellow;
+}
+
+
+#res{
+
+    margin-top: 20px;
+    color: black;
+
+
+}
+        
+    </style>
+    
+</head>
+<body>
+    
+<h1>Multiplicando Valores</h1>
+
+<input type="number" name="txtn1" id="txtn1"> X
+<input type="number" name="txtn2" id="txtn2">
+<input type="button" value="Multiplicar" onclick="multiplicar()" id="multi">
+<div id="res"><strong>Resultado</strong></div>
+
+<script>
+
+function multiplicar(){
+
+var tn1 = window.document.getElementById('txtn1')
+var tn2 = window.document.querySelector('input#txtn2')
+var res = window.document.getElementById('res')
+
+var n1 = Number(tn1.value)
+var n2 = Number(tn2.value)
+
+var s = n1*n2
+
+res.innerHTML = `A Multiplicação entre ${n1} e ${n2} é igual a: <strong> ${s}<\strong>`
+}
+
+</script>
+
+</body>
+</html>
